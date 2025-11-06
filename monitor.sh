@@ -5,7 +5,7 @@ LOG_FILE="$LOG_DIR/system_status.log"
 
 mkdir -p $LOG_DIR
 
-echo "=== $(date '+%Y-%m-%d %H:%M:%S') ===" >> $LOG_FILE
+echo "$(date '+%Y-%m-%d %H:%M:%S')" >> $LOG_FILE
 
 echo "CPU Load:" >> $LOG_FILE
 uptime | awk -F'load average:' '{ print $2 }' >> $LOG_FILE
